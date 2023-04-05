@@ -1,0 +1,77 @@
+{
+  "private": false,
+  "name": "postcss-transform-logical",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "author": "Larry Davis <lazdnet@gmail.com>",
+  "contributors": [
+    "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castastrophe/postcss-transform-logical.git"
+  },
+  "bugs": {
+    "url": "https://github.com/castastrophe/postcss-transform-logical/issues"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=14 <=18"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1 #ava",
+    "coverage": "c8 yarn test",
+    "semantic-release": "semantic-release"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": " https://github.com/sponsors/castastrophe"
+    }
+  ],
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^10.0.2",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "ava": "^5.2.0",
+    "c8": "^7.13.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
+    "prettier-package-json": "^2.8.0",
+    "semantic-release": "^21.0.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "prettier-package-json --write"
+    ]
+  },
+  "keywords": [
+    "transforms",
+    "css",
+    "custom",
+    "plugin",
+    "postcss",
+    "properties"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
