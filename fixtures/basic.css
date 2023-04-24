@@ -1,0 +1,13 @@
+.transform-test1 {
+  background-color: gray;
+  transform: logical rotate(0deg);
+}
+
+.transform-test2 {
+  outline: 1px solid pink;
+  transform: logical rotate(90deg) scale3d(2.5, 1.2, 0.3);
+}
+
+.transform-test3 {
+  transform: rotate(180deg);
+}

@@ -23,7 +23,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1 #ava",
+    "test": "ava",
     "coverage": "c8 yarn test",
     "semantic-release": "semantic-release"
   },
@@ -35,6 +35,9 @@
   ],
   "peerDependencies": {
     "postcss": "^8.0.0"
+  },
+  "dependencies": {
+    "postcss-values-parser": "^6.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",

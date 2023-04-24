@@ -1,0 +1,27 @@
+.transform-test1 {
+  background-color: gray;
+}
+
+[dir="rtl"] .transform-test1,
+.transform-test1:dir(rtl) {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.transform-test2 {
+  outline: 1px solid pink;
+}
+
+.transform-test2,
+[dir="ltr"] .transform-test2,
+.transform-test2:dir(ltr) {
+  transform: rotate(90deg) scale3d(2.5, 1.2, 0.3);
+}
+
+[dir="rtl"] .transform-test2,
+.transform-test2:dir(rtl) {
+  transform: matrix(-1, 0, 0, 1, 0, 0) rotate(90deg) scale3d(2.5, 1.2, 0.3);
+}
+
+.transform-test3 {
+  transform: rotate(180deg);
+}
