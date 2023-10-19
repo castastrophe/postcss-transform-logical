@@ -55,7 +55,7 @@
     "postcss": "^8.4.29",
     "prettier": "^3.0.3",
     "prettier-package-json": "^2.8.0",
-    "semantic-release": "^21.0.2"
+    "semantic-release": "^22.0.5"
   },
   "lint-staged": {
     "*.js": [
