@@ -10,12 +10,12 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Use Node LTS version
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           cache: yarn
-          node-version: 18
+          node-version: 20
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Run test suite
@@ -26,16 +26,16 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           cache: yarn
-          node-version: 18
+          node-version: 20
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Run coverage report
         run: yarn coverage
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: coverage-data-${{ github.run_id }}
           path: |
@@ -47,7 +47,7 @@ jobs:
           format: 'markdown'
           output: 'both'
       - name: Add coverage PR comment
-        uses: marocchino/sticky-pull-request-comment@v2.5.0
+        uses: marocchino/sticky-pull-request-comment@v2.9.0
         with:
           recreate: true
           path: code-coverage-results.md

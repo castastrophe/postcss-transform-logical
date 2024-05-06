@@ -15,17 +15,12 @@ jobs:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
           with:
-            persist-credentials: false
-        - uses: actions/setup-node@v3
-          with:
-            node-version: 18
+            node-version: 20
             cache: yarn
-            registry-url: https://registry.npmjs.org
+            registry-url: "https://registry.npmjs.org"
         - run: yarn install --frozen-lockfile
         - name: Semantic release
-          uses: cycjimmy/semantic-release-action@v3
-          env:
-            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          uses: cycjimmy/semantic-release-action@v4.1.0
