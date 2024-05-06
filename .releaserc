@@ -6,20 +6,22 @@
     { "name": "alpha", "prerelease": true }
   ],
   "plugins": [
-    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
     "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
     "@semantic-release/github",
     [
       "@semantic-release/git",
       {
         "assets": [
-          "index.js",
-          "CHANGELOG.md",
           "package.json",
           "yarn.lock"
         ],
-        "message": "chore: release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
     "@semantic-release/npm"
